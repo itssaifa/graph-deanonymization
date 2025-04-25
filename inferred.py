@@ -5,7 +5,7 @@ import os
 print("📁 Loading graphs...")
 G1 = nx.read_edgelist('validation_G1.edgelist')
 G2 = nx.read_edgelist('validation_G2.edgelist ') 
-print(f"✅ G1 nodes: {len(G1.nodes())}, G2 nodes: {len(G2.nodes())}")
+print(f"G1 nodes: {len(G1.nodes())}, G2 nodes: {len(G2.nodes())}")
 
 print("📁 Loading seed mappings...")
 seed_mapping = {}
@@ -13,7 +13,7 @@ with open('seed_mapping.txt', 'r') as f:
     for line in f:
         g1, g2 = line.strip().split()
         seed_mapping[g1] = g2
-print(f"✅ Loaded {len(seed_mapping)} seed pairs")
+print(f"Loaded {len(seed_mapping)} seed pairs")
 
 g1_seeded = set(seed_mapping.keys())
 g2_seeded = set(seed_mapping.values())
