@@ -1,3 +1,7 @@
+import time
+
+start_time = time.time()
+
 inferred = {}
 with open('inferred_mapping.txt', 'r') as f:
     for line in f:
@@ -23,6 +27,5 @@ accuracy = correct / total if total else 0
 
 print(f"Validation accuracy: {accuracy:.4f} ({correct}/{total} correct matches)")
 
-
-"" Outcome
-Validation accuracy: 0.0012 (6/4859 correct matches) ""
+end_time = time.time()
+print(f"Execution time: {end_time - start_time:.4f} seconds")
